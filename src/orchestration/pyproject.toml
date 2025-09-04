@@ -1,0 +1,17 @@
+[project]
+name = "glacial-orchestration"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "glacial-synthesis",
+    "playwright==1.52.0",
+    "typer>=0.17.3",
+    "watchfiles>=1.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+glacial-orchestration = "glacial_orchestration:main"

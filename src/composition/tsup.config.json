@@ -1,0 +1,24 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+  "entry": ["src/index.ts"],
+  "format": ["esm", "cjs"],
+  "dts": true,
+  "sourcemap": true,
+  "clean": true,
+  "splitting": false,
+  "target": "es2020",
+  "bundle": true,
+  "platform": "neutral",
+  "treeshake": true,
+  "outDir": "dist",
+  "minify": false,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "noExternal": [
+    "@strudel/core",
+    "@strudel/mini",
+    "@strudel/webaudio",
+    "consola"
+  ]
+}

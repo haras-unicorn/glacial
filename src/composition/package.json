@@ -1,0 +1,16 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "private": true,
+  "type": "module",
+  "name": "glacial-composition",
+  "version": "0.1.0",
+  "dependencies": {
+    "@strudel/core": "1.2.2",
+    "@strudel/mini": "1.2.2",
+    "@strudel/webaudio": "1.2.3",
+    "consola": "^3.4.2"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://www.schemastore.org/tsconfig.json",
+  "extends": "@tsconfig/node24/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "glacial-composition/*": ["src/composition/src/*"]
+    }
+  }
+}

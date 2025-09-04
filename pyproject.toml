@@ -1,0 +1,38 @@
+[project]
+name = "glacial"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["glacial-synthesis", "glacial-orchestration"]
+
+[dependency-groups]
+dev = [
+  "mypy>=1.17.1",
+  "pylsp-mypy>=0.7.0",
+  "python-lsp-server[flake8,mccabe,pycodestyle,pydocstyle,pyflakes,pylint,rope]>=1.13.1",
+  "ruff >=0.1.4",
+]
+
+[tool.uv.sources]
+glacial-synthesis = { workspace = true }
+glacial-orchestration = { workspace = true }
+
+[tool.uv.workspace]
+members = ["src/synthesis", "src/orchestration"]
+
+[project.scripts]
+glacial-synthesis = "glacial_synthesis:main"
+glacial-orchestration = "glacial_orchestration:main"
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["soundfile.*"]
+follow_untyped_imports = true
+
+[tool.ruff]
+line-length = 80
+indent-width = 2
+fix = true
+show-fixes = true
+lint.extend-select = ["I"]
